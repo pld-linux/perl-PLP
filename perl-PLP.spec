@@ -17,7 +17,6 @@ URL:		http://plp.juerd.nl/
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	apache-mod_perl >= 1.26
-Requires:	perl >= 5.6
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
