@@ -12,7 +12,7 @@ Release:	1
 License:	GPL
 Vendor:		Jorril Waalboer (Juerd)
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-authors/id/J/JU/JUERD/%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-authors/id/J/JU/JUERD/%{pnam}-%{version}.tar.gz
 URL:		http://plp.juerd.nl/
 BuildRequires:	perl >= 5.6
 BuildRequires:	rpm-perlprov >= 3.0.3-16
