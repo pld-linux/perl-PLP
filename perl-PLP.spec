@@ -30,13 +30,13 @@ PLP runs under mod_perl for speeds comparable to those of PHP, but can
 also be run as a CGI script.
 
 %description -l pl
-PLP to kolejne wcielenie osadzonego perla, g³ównie dla potrzeb
+PLP to kolejne wcielenie osadzonego Perla, g³ównie dla potrzeb
 tworzenia dynamicznych dokumentów HTML. Nie wymaga nauki nowych
-znaczników czy meta-tag'ów, lub kolejnego obiektu w perlu. Sposób
-osadzania perla w dokumencie HTML przypomina trochê skladniê znan± z
+znaczników czy meta-tagów, lub kolejnego obiektu w Perlu. Sposób
+osadzania Perla w dokumencie HTML przypomina trochê skladniê znan± z
 jêzyka PHP.
 
-PLP moze dzialac pod kontrola Apache/mod_perl lub jako skrypt CGI.
+PLP moze dzia³aæ pod kontrol± Apache/mod_perl lub jako skrypt CGI.
 
 %prep
 %setup -q -n %{pnam}-%{version}
@@ -44,6 +44,7 @@ PLP moze dzialac pod kontrola Apache/mod_perl lub jako skrypt CGI.
 %build
 perl Makefile.PL
 %{__make}
+
 %{!?_without_tests:%{__make} test}
 
 %install
@@ -53,6 +54,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post
+echo "Check 'man PLP' for details about activate PLP with Apache web server"
+
+%postun
+echo "Remember to change /etc/httpd/httpd.conf manually"
 
 %files
 %defattr(644,root,root,755)
