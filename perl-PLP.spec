@@ -3,7 +3,7 @@
 %bcond_without	tests # do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define		pnam	PLP
+%define	pnam	PLP
 Summary:	PLP - yet another Perl in HTML embedder
 Summary(pl):	PLP - Perl osadzony w dokumentach HTML
 Name:		perl-PLP
