@@ -1,16 +1,19 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pnam	PLP
 Summary:	PLP is yet another Perl in HTML embedder
 Summary(pl):	Perl osadzony w dokumentach HTML
 Name:		perl-PLP
-Version:	3.16
-Release:	2
+Version:	3.17
+Release:	1
 License:	GPL
 Vendor:		Jorril Waalboer (Juerd)
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-authors/id/J/JU/JUERD/%{pnam}-%{version}.tar.gz
 URL:		http://plp.juerd.nl/
-Patch0:		%{name}.patch
 BuildRequires:	perl >= 5.6
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 Requires:	apache-mod_perl >= 1.26
@@ -37,11 +40,11 @@ PLP moze dzialac pod kontrola Apache/mod_perl lub jako skrypt CGI.
 
 %prep
 %setup -q -n %{pnam}-%{version}
-%patch0 -p1
 
 %build
 perl Makefile.PL
 %{__make}
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
