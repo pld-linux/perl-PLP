@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pnam	PLP
-Summary:	PLP is yet another Perl in HTML embedder.
+Summary:	PLP is yet another Perl in HTML embedder
 Summary(pl):	Perl osadzony w dokumentach HTML
 Name:		perl-PLP
 Version:	3.16
@@ -11,10 +11,10 @@ Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-authors/id/J/JU/JUERD/%{pnam}-%{version}.tar.gz
 URL:		http://plp.juerd.nl/
 Patch0:		%{name}.patch
-BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
-Requires:	perl >= 5.6
+BuildRequires:	rpm-perlprov >= 3.0.3-16
 Requires:	apache-mod_perl >= 1.26
+Requires:	perl >= 5.6
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -33,7 +33,7 @@ znaczników czy meta-tag'ów, lub kolejnego obiektu w perlu. Sposób
 osadzania perla w dokumencie HTML przypomina trochê skladniê znan± z
 jêzyka PHP.
 
-PLP moze dzialac pod kontrola Apache/mod_perl lub jako skrypt CGI
+PLP moze dzialac pod kontrola Apache/mod_perl lub jako skrypt CGI.
 
 %prep
 %setup -q -n %{pnam}-%{version}
