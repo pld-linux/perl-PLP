@@ -33,10 +33,10 @@ also be run as a CGI script.
 PLP to kolejne wcielenie osadzonego Perla, g³ównie dla potrzeb
 tworzenia dynamicznych dokumentów HTML. Nie wymaga nauki nowych
 znaczników czy meta-tagów, lub kolejnego obiektu w Perlu. Sposób
-osadzania Perla w dokumencie HTML przypomina trochê skladniê znan± z
+osadzania Perla w dokumencie HTML przypomina trochê sk³adniê znan± z
 jêzyka PHP.
 
-PLP moze dzia³aæ pod kontrol± Apache/mod_perl lub jako skrypt CGI.
+PLP mo¿e dzia³aæ pod kontrol± Apache/mod_perl lub jako skrypt CGI.
 
 %prep
 %setup -q -n %{pnam}-%{version}
