@@ -8,14 +8,14 @@ Summary:	PLP is yet another Perl in HTML embedder
 Summary(pl):	Perl osadzony w dokumentach HTML
 Name:		perl-PLP
 Version:	3.18
-Release:	1
+Release:	2
 License:	GPL
 Vendor:		Jorril Waalboer (Juerd)
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/J/JU/JUERD/%{pnam}-%{version}.tar.gz
 URL:		http://plp.juerd.nl/
 BuildRequires:	perl >= 5.6
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	apache-mod_perl >= 1.26
 Requires:	perl >= 5.6
 BuildArch:	noarch
@@ -42,7 +42,8 @@ PLP moze dzia³aæ pod kontrol± Apache/mod_perl lub jako skrypt CGI.
 %setup -q -n %{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %{!?_without_tests:%{__make} test}
@@ -64,8 +65,8 @@ echo "Remember to change /etc/httpd/httpd.conf manually"
 %files
 %defattr(644,root,root,755)
 %doc Changes README plp.vim
-%dir %{perl_sitelib}/PLP
-%{perl_sitelib}/PLP/*.pm
-%{perl_sitelib}/PLP/Tie
-%{perl_sitelib}/PLP.pm
+%dir %{perl_vendorlib}/PLP
+%{perl_vendorlib}/PLP/*.pm
+%{perl_vendorlib}/PLP/Tie
+%{perl_vendorlib}/PLP.pm
 %{_mandir}/man[13]/*
