@@ -15,7 +15,7 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/J/JU/JUERD/%{pnam}-%{version}.tar.gz
 # Source0-md5:	2d3ad7ecfa0f437fa4e2e0074e9af07e
 URL:		http://plp.juerd.nl/
-BuildRequires:	perl-devel >= 5.6
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	apache-mod_perl >= 1.26
 BuildArch:	noarch
