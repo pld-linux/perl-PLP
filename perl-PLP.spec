@@ -42,7 +42,7 @@ PLP moze dzia³aæ pod kontrol± Apache/mod_perl lub jako skrypt CGI.
 %setup -q -n %{pnam}-%{version}
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make}
 
 %{!?_without_tests:%{__make} test}
