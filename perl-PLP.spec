@@ -4,7 +4,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pnam	PLP
-Summary:	PLP - PLP is yet another Perl in HTML embedder
+Summary:	PLP - yet another Perl in HTML embedder
 Summary(pl):	PLP - Perl osadzony w dokumentach HTML
 Name:		perl-PLP
 Version:	3.18
