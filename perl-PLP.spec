@@ -8,7 +8,7 @@ Summary:	PLP - yet another Perl in HTML embedder
 Summary(pl.UTF-8):	PLP - Perl osadzony w dokumentach HTML
 Name:		perl-PLP
 Version:	3.18
-Release:	2
+Release:	3
 License:	unknown
 Vendor:		Jorril Waalboer (Juerd)
 Group:		Development/Languages/Perl
