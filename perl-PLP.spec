@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests # do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pnam	PLP
 Summary:	PLP - yet another Perl in HTML embedder
 Summary(pl.UTF-8):	PLP - Perl osadzony w dokumentach HTML
