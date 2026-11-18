@@ -6,13 +6,13 @@
 Summary:	PLP - yet another Perl in HTML embedder
 Summary(pl.UTF-8):	PLP - Perl osadzony w dokumentach HTML
 Name:		perl-PLP
-Version:	3.18
-Release:	4
-License:	unknown
+Version:	3.25
+Release:	1
+License:	MIT
 Vendor:		Jorril Waalboer (Juerd)
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/J/JU/JUERD/%{pnam}-%{version}.tar.gz
-# Source0-md5:	2d3ad7ecfa0f437fa4e2e0074e9af07e
+Source0:	https://www.cpan.org/authors/id/S/SH/SHIAR/%{pnam}-%{version}.tar.gz
+# Source0-md5:	31f4f066a07efbd0af1c34633047c4b9
 URL:		http://plp.juerd.nl/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -50,8 +50,10 @@ PLP może działać pod kontrolą Apache/mod_perl lub jako skrypt CGI.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+%{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+find $RPM_BUILD_ROOT -name .packlist | xargs -r rm -f
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -67,6 +69,9 @@ echo "Remember to change /etc/httpd/httpd.conf manually"
 %doc Changes README plp.vim
 %dir %{perl_vendorlib}/PLP
 %{perl_vendorlib}/PLP/*.pm
+%{perl_vendorlib}/PLP/*.pod
+%{perl_vendorlib}/PLP/Backend
 %{perl_vendorlib}/PLP/Tie
 %{perl_vendorlib}/PLP.pm
+%{perl_vendorlib}/Test/PLP.pm
 %{_mandir}/man[13]/*
